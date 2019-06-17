@@ -1,4 +1,4 @@
-from Downloader import *
+from Downloader import Downloader
 
 url_metadata = "https://os.unil.cloud.switch.ch/fma/fma_metadata.zip"
 url_small = "https://os.unil.cloud.switch.ch/fma/fma_small.zip"
@@ -14,8 +14,9 @@ sha1sum_full = '0f0ace23fbe9ba30ecb7e95f763e435ea802b8ab'
 
 threads = 10
 
-obj = Downloader(url=url_large, number_of_threads=threads, destination_directory='D:\\audio-mashup-dataset',
-                 source_sha1sum=sha1sum_large)
+code_geass = 'https://ca-east.uploadfiles.io/get/6tnazj0v'
+
+obj = Downloader(url=code_geass, number_of_threads=threads, destination_directory='D:\\Downloads')
 
 obj.start_download()
 # obj.merge_chunks()
